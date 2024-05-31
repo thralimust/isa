@@ -1,0 +1,243 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+
+
+
+        <style>
+            body {
+                background-color: linen;
+            }
+
+
+            commandButton
+            {
+                background-color: #287234;
+                color: #EEE;
+                font-weight: bold;
+                text-transform: uppercase;
+                width: 285px;
+
+                font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+                text-decoration: none;
+                border-radius: 0.25rem;
+                display: block;
+                text-align: center;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            table{
+                width:100%;
+                padding:0px;
+                border:0px;
+                border-spacing:0px;
+
+            }
+
+            .my-button {
+                background-color: #287234;
+                color: #EEE;
+                font-weight: bold;
+                text-transform: uppercase;
+                width: 285px;
+
+                font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+                text-decoration: none;
+                border-radius: 0.25rem;
+                margin: 0; display: flex; justify-content: center; align-items: center;
+                display: block;
+                text-align: center;
+                padding-top: 10px;
+                padding-bottom: 10px;
+
+            }
+            .my-input {
+                background-color: #287234;
+                color: #EEE;
+                font-weight: bold;
+                text-transform: uppercase;
+                width: 285px;
+
+                font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+                text-decoration: none;
+                border-radius: 0.25rem;
+                display: block;
+                margin: 0; display: flex; justify-content: center; align-items: center;
+                text-align: center;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            .my-buttonadd {
+                background-color: #287234;
+                color: #EEE;
+                font-weight: bold;
+                text-transform: uppercase;
+                width: 285px;
+                margin: 0; display: flex; justify-content: center; align-items: center;
+
+                font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+                text-decoration: none;
+                border-radius: 0.25rem;
+                display: block;
+                text-align: center;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            .my-grid {
+                background-color: #287234;
+                color: #EEE;
+                font-weight: bold;
+                text-transform: uppercase;
+                width: 290px;
+
+                font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+                text-decoration: none;
+                border-radius: 0.25rem;
+                display: block;
+                text-align: center;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            .my-selectOneMenun {
+                background-color: #287234;
+                color: #EEE;
+                font-weight: bold;
+                text-transform: uppercase;
+                width: 280px;
+                margin-left: 10px;
+                font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+                text-decoration: none;
+                border-radius: 0.25rem;
+                display: block;
+                text-align: center;
+                padding-top: 10px;
+                padding-bottom: 10px;}
+            .table{
+                width:100%;
+                padding:0px;
+                border:0px;
+                border-spacing:0px;
+
+            }
+            .ui-panelgrid .ui-panelgrid-cell.panelgrid-cell-nopad {
+                border-width: 1px;
+                border-style: solid;
+                border-color: inherit;
+                padding: 1px 1px;
+            }
+            .container {
+                height: 200px;
+                position: relative;
+                border: 3px solid green;
+            }
+            .th {
+                background-color: #04AA6D;
+                color: white;
+                border: 3px solid green;
+            }
+            .colo { width: 40%; 
+                    font-size:6pt;
+                    font-family: Arial;
+                    border-bottom-style:solid;
+                    border-bottom-color:#DDDDDD;
+                    border-bottom-width:1px;
+                    border-right-style:solid;
+                    border-right-color:#DDDDDD;
+                    border-right-width:1px;
+                    padding:2px;
+                    vertical-align:top;
+                    text-align:right;
+
+
+            }
+
+        </style>
+    </h:head>
+    <h:body >
+
+
+        <h:form  style="  color: green; text-align: center ; padding-top: 30px; margin: 0; display: flex; justify-content: center; align-items: center;" >
+            <h:panelGrid columns="1" styleClass="my-grid" style="   text-align: center ; padding-top: 30px; margin: 0; display: flex; justify-content: center; align-items: center;"  >
+                <h:outputLabel for="name" value="Name:" />
+                <div
+                    style="height: 10px"></div>
+                <h:inputText id="name" value="#{employeeBean.name}" styleClass="my-input " style="margin-left: 0.5px" />
+                <div
+                    style="height: 20px"></div>
+                <h:outputLabel for="gender" value="Gender" />
+                <div
+                    style="height: 10px"></div>
+                <h:selectOneMenu id="gender" value="#{employeeBean.gender}" styleClass="my-button" style="margin-left: 3.5px">
+                    <f:selectItem itemValue="Male" itemLabel="Male" />
+                    <f:selectItem itemValue="Female" itemLabel="Female" />
+                </h:selectOneMenu>
+                <div
+                    style="height: 20px"></div>
+                <h:outputLabel for="department" value="Department"  />
+                <div
+                    style="height: 10px"></div>
+                <h:selectOneMenu id="department" value="#{employeeBean.department}" styleClass="my-button" style="margin-left: 3.5px"  >
+                    <f:selectItem itemValue="HR" itemLabel="HR" />
+                    <f:selectItem itemValue="Finance" itemLabel="Finance" />
+                    <f:selectItem itemValue="IT" itemLabel="IT" />
+                </h:selectOneMenu>
+                <div
+                    style="height: 20px"></div>
+                <img  src="unnamed.png" alt="Flowers in Chania" styleClass="my-button" ></img>
+                <div
+                    style="height: 20px"></div>
+
+                <h:commandButton value="Add Employee" action="#{employeeBean.addEmployee}" styleClass="my-buttonadd" style="margin-left: 3.5px"   />
+
+
+
+
+
+
+
+            </h:panelGrid>
+        </h:form>
+
+        <br></br>
+
+
+
+
+        <h:panelGrid id="employeeTable" columns="4"  >
+            <p:dataTable value="#{employeeBean.employees}" var="emp" rendered="#{not empty employeeBean.employees}" styleClass="th" style="border: 3px solid green; text-align: center ; padding-top: 30px;"
+
+                         >
+
+                <p:column style="border: 3px solid green; text-align: center ; padding-top: 30px;"  >
+                    <f:facet   name="header">ID</f:facet>
+                        #{emp.id}
+                </p:column>
+
+
+                <p:column style="border: 3px solid green; text-align: center ; padding-top: 30px;">
+                    <f:facet  name="header">Name</f:facet>
+                        #{emp.name}
+                </p:column>
+                <p:column style="border: 3px solid green; text-align: center ; padding-top: 30px;" >
+                    <f:facet name="header">Gender</f:facet>
+                        #{emp.gender}
+                </p:column>
+                <p:column style="border: 3px solid green; text-align: center ; padding-top: 30px;">
+                    <f:facet name="header">Department</f:facet>
+                        #{emp.department}
+                </p:column>
+            </p:dataTable>
+        </h:panelGrid>
+
+
+
+        <br></br>
+    </h:body>
+</html>
+
